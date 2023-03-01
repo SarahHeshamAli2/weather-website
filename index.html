@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Cairo&family=Montserrat&family=Raleway&family=Roboto&family=Shantell+Sans&family=Source+Sans+Pro&family=Titillium+Web:wght@300;400&family=Work+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<section>
+
+   <div class="load-img  align-items-center justify-content-center" id="load">
+    <img src="imgs/cloud.png" class="w-50 " alt="">
+   </div>
+    
+    <div class="backGround position-relative" id="backGround">
+    <div class="container">
+        <div class="imgs w-50">
+        </div>
+        <div class="dropdown float-end">
+            <button class="btn dp-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Change theme
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                 <img src="imgs/first-theme.jpg" alt="" srcset="" class="dropdown-item" id="img">
+              </li>
+              <li>   
+                         <img src="imgs/second-theme.jpg" alt="" srcset="" class="dropdown-item" id="img">
+              </li>
+              <li> 
+                <img src="imgs/trial.jpg" alt="" class="dropdown-item" id="img">
+              </li>
+              <li> 
+                <img src="imgs/default.jpg" alt="" class="dropdown-item" id="img">
+              </li>
+              <!-- <li><a class="dropdown-item" href="#" id="theme3" onclick="changeBackGround4()" data-theme="theme3">default</a></li> -->
+            </ul>
+          </div>
+        <div class="d-flex align-items-center seacrh-bar">
+            <h1 class="py-5" id="cityName">Cairo</h1>
+            <input type="text" class="form-control spc-form mx-2" id="searchInput" onkeyup="getCurrentWeather(this.value)">
+        </div>
+        <div class="row spc-row1 px-5 align-items-center py-3">
+
+            <div class="col-md-4 col-sm-12 px-5">
+                <div class="weather-icon text-center text-white" >
+                        <div id="icon">
+
+                        </div>
+                        <div class="astronomy">
+                        <div>
+                            <span id="sunRise">Sunrise:</span>
+                            
+                        </div>
+                        <div>
+                            <span id="sunSet">Sunset:</span>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+    </div>
+    <div class="col-md-4 text-white  ">
+        <div class="time">
+            <span class="currentDay">Friday 27 july 15:00</span>
+            <span class="currentDayInNum"></span>
+            <div class="temp my-2" id="currentTemp">
+                22°C
+            </div>
+            <div class="feels-like my-2" id="feelsLike">
+                <p>feels like 23°C</p>
+            </div>
+            <div id="condition">
+                <p>Clear</p>
+            </div>
+         
+        </div>
+    </div>
+
+    <div class="col-md-4 text-white px-5 remove-div">
+        <div class="more-detail">
+            <h5>More detail</h5>
+            <p id="wind-speed">wind speed:18m/s</p>
+            <p id="humi">air humidity:42-76%</p>
+            <p id="press">pressure:747-749mm</p>
+        </div>
+    </div>
+
+            </div>
+
+        </div>
+        
+<div class="spc-border ">
+    <div class="container ">
+        <div class="row  spc-row  spc-w text-center">
+            <div class="col-md-3 text-white mx-4">
+                <div class="1stDay">
+                    <div class="day">
+                        Friday
+                    </div>
+                    <div class="date">
+                        24 July
+                    </div>
+                    <div class="min">
+                       min <span>15°C</span>
+                    </div>
+                    <div class="max">
+                      max <span> 25°C</span>
+                    </div>
+                    <div class="spc-icon">
+                    <i class="fa-solid fa-cloud-sun-rain "></i>   
+
+                    </div>
+                    <div class="desc">
+                        cloudy
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-white mx-3">
+                <div class="1stDay">
+                    <div class="day">
+                        Friday
+                    </div>
+                    <div class="date">
+                        24 July
+                    </div>
+                    <div class="min">
+                       min <span> 15°C</span>
+                    </div>
+                    <div class="max">
+                      max  <span>25°C</span>
+                    </div>
+                    <div class="spc-icon">
+                    <i class="fa-solid fa-cloud-sun-rain "></i>   
+
+                    </div>
+                    <div class="desc">
+                        cloudy
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-white mx-3 ">
+                <div class="1stDay">
+                    <div class="day">
+                        Friday
+                    </div>
+                    <div class="date">
+                        24 July
+                    </div>
+                    <div class="min">
+                       min <span>15°C</span>
+                    </div>
+                    <div class="max">
+                      max <span> 25°C</span>
+                    </div>
+                    <div class="spc-icon">
+                    <i class="fa-solid fa-cloud-sun-rain "></i>   
+
+                    </div>
+                    <div class="desc">
+                        cloudy
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-white mx-3 remove-div">
+                <div class="1stDay">
+                    <div class="day">
+                        Friday
+                    </div>
+                    <div class="date">
+                        24 July
+                    </div>
+                    <div class="min">
+                       min <span>15°C</span>
+                    </div>
+                    <div class="max">
+                      max  25°C
+                    </div>
+                    <div class="spc-icon">
+                    <i class="fa-solid fa-cloud-sun-rain "></i>   
+
+                    </div>
+                    <div class="desc">
+                        cloudy
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    </div>
+</section>
+
+
+
+
+    <script src="javaScript/bootstrap.bundle.js"></script>
+    <script src="javaScript/jquery-3.5.1.min.js"></script>
+    <script src="javaScript/main.js"></script>
+</body>
+</html>
